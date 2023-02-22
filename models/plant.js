@@ -12,9 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     species: DataTypes.STRING,
     light: DataTypes.STRING,
-    type: DataTypes.ENUM('Light', 'Moderate', 'Generous'),
-    defaultValue: 'Moderate'
-  }, {
+    water: {
+      type: DataTypes.ENUM,
+      values: [ 'Light', 'Moderate', 'Generous' ],
+      defaultValue: 'Moderate',
+    }, 
     sequelize,
     modelName: 'Plant',
   });

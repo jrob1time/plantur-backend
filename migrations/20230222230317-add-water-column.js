@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
 
-    await queryInterface.addColumn('Plants', 'water', { type: Sequelize.STRING })
+    await queryInterface.addColumn('Plants', 'water', { type: Sequelize.ENUM('Light', 'Moderate', 'Generous'), defaultValue: 'Moderate' })
   },
   async down(queryInterface, Sequelize) {
 
