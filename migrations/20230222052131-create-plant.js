@@ -18,10 +18,6 @@ module.exports = {
       light: {
         type: Sequelize.STRING
       },
-      water: {
-        type: Sequelize.ENUMS('Light', 'Moderate', 'Generous'),
-        defaultValue: 'Moderate'
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
