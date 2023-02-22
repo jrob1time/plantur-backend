@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM,
       values: [ 'Light', 'Moderate', 'Generous' ],
       defaultValue: 'Moderate',
-    }, 
+    },
+  }, {
     sequelize,
     modelName: 'Plant',
   });
