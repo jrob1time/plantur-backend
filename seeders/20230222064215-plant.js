@@ -3,7 +3,6 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    // Seed commands
 
     const date = new Date()
 
@@ -19,9 +18,8 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    // Commands to revert seed
     
-    await queryInterface.bulkDelete('Cats', null, {})
+    await queryInterface.bulkDelete('Plants', null, {})
 
   }
 };
